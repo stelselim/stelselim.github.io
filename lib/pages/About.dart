@@ -44,7 +44,7 @@ class About extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  "$aboutText",
+                  aboutMeText,
                   textAlign: TextAlign.center,
                   textScaleFactor: 1.5,
                 ),
