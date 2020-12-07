@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/utilities/checkMobile.dart';
 
 class TextCard extends StatelessWidget {
   const TextCard({
@@ -8,7 +9,7 @@ class TextCard extends StatelessWidget {
   }) : super(key: key);
 
   final String text;
-  final Icon icon;
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -20,18 +21,28 @@ class TextCard extends StatelessWidget {
       child: Container(
         alignment: Alignment.center,
         padding: EdgeInsets.all(30),
-        child: ListTile(
-          leading: icon,
-          title: Text(
-            text,
-            textScaleFactor: 2.1,
-            style: TextStyle(
-              height: 1.5,
-              color: Colors.blueGrey.shade800,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-        ),
+        child: checkMobile(context)
+            ? Text(
+                text,
+                textScaleFactor: 1.5,
+                style: TextStyle(
+                  height: 1.5,
+                  color: Colors.blueGrey.shade800,
+                  fontWeight: FontWeight.w400,
+                ),
+              )
+            : ListTile(
+                leading: Icon(icon, size: 35),
+                title: Text(
+                  text,
+                  textScaleFactor: checkMobile(context) ? 1 : 2.1,
+                  style: TextStyle(
+                    height: 1.5,
+                    color: Colors.blueGrey.shade800,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
       ),
     );
   }

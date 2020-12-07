@@ -73,10 +73,7 @@ class _HomeState extends State<Home> {
                 Padding(
                   padding: const EdgeInsets.all(15.0),
                   child: TextCard(
-                    icon: Icon(
-                      FontAwesomeIcons.portrait,
-                      size: 35,
-                    ),
+                    icon: FontAwesomeIcons.portrait,
                     text: homeShortDescription,
                   ),
                 ),

@@ -51,31 +51,19 @@ class About extends StatelessWidget {
                   ),
                 ),
                 TextCard(
-                  icon: Icon(
-                    Icons.school,
-                    size: 35,
-                  ),
+                  icon: Icons.school,
                   text: aboutMeText1,
                 ),
                 TextCard(
-                  icon: Icon(
-                    Icons.work,
-                    size: 35,
-                  ),
+                  icon: Icons.work,
                   text: aboutMeText2,
                 ),
                 TextCard(
-                  icon: Icon(
-                    FontAwesomeIcons.fly,
-                    size: 35,
-                  ),
+                  icon: FontAwesomeIcons.fly,
                   text: aboutMeText3,
                 ),
                 TextCard(
-                  icon: Icon(
-                    FontAwesomeIcons.basketballBall,
-                    size: 35,
-                  ),
+                  icon: FontAwesomeIcons.basketballBall,
                   text: aboutMeText4,
                 ),
               ],

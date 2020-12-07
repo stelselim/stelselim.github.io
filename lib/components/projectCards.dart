@@ -24,7 +24,7 @@ class ProjectCard extends StatelessWidget {
                 color: Colors.red,
               )),
               child: Image.asset(
-                'projects/phone.png',
+                '/projects/phone.png',
                 width: 337,
                 height: 667,
               ),
