@@ -9,3 +9,5 @@ const twitter = "https://twitter.com/Stelselim";
 const diyetAndroid =
     "https://play.google.com/store/apps/details?id=com.diyetin.beslenme";
 const diyetIOS = "https://apps.apple.com/us/app/diyet-in/id1498230192";
+
+const cvURL = "https://rb.gy/w9w0ga";

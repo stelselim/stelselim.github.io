@@ -31,110 +31,121 @@ class _HomeState extends State<Home> {
       appBar: appBarWidget(
         context: context,
       ),
-      backgroundColor: Colors.grey.shade100,
-      body: ListView(
-        padding: EdgeInsets.only(bottom: 200),
-        shrinkWrap: true,
-        children: [
-          isMobile
-              ? CarouselSlider(
-                  items: isMobile ? carouselItemsSmall : carouselItems,
-                  carouselController: controllerCarousel,
-                  options: isMobile ? optionsSmall : options,
-                )
-              : Container(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                        width: carouseWidth(context),
-                        child: Container(
-                          child: CarouselSlider(
-                            items:
-                                isMobile ? carouselItemsSmall : carouselItems,
-                            carouselController: controllerCarousel,
-                            options: isMobile ? optionsSmall : options,
-                          ),
+      backgroundColor: Colors.white,
+      body: Container(
+        alignment: Alignment.topCenter,
+        child: SizedBox(
+          width: width > 1500 ? 1400 : null,
+          child: Container(
+            height: height,
+            color: Colors.grey.shade100,
+            child: ListView(
+              padding: EdgeInsets.only(bottom: 100),
+              shrinkWrap: true,
+              children: [
+                isMobile
+                    ? CarouselSlider(
+                        items: isMobile ? carouselItemsSmall : carouselItems,
+                        carouselController: controllerCarousel,
+                        options: isMobile ? optionsSmall : options,
+                      )
+                    : Container(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            SizedBox(
+                              width: carouseWidth(context),
+                              child: Container(
+                                child: CarouselSlider(
+                                  items: isMobile
+                                      ? carouselItemsSmall
+                                      : carouselItems,
+                                  carouselController: controllerCarousel,
+                                  options: isMobile ? optionsSmall : options,
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
                       ),
-                    ],
+                Card(
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 20,
+                  ),
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(30),
+                    child: SelectableText(
+                      homeShortDescription,
+                      textScaleFactor: 2.2,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
                   ),
                 ),
-          Card(
-            margin: EdgeInsets.symmetric(
-              vertical: 10,
-              horizontal: width * marginText,
-            ),
-            child: Container(
-              alignment: Alignment.center,
-              padding: EdgeInsets.all(30),
-              child: SelectableText(
-                homeShortDescription,
-                textScaleFactor: 2.2,
-                style: TextStyle(
-                  fontWeight: FontWeight.w400,
+                SizedBox(
+                  height: 35,
                 ),
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 35,
-          ),
-          ButtonBar(
-            buttonAlignedDropdown: true,
-            alignment: MainAxisAlignment.center,
-            children: [
-              FlatButton(
-                onPressed: () =>
-                    Navigator.of(context).pushReplacementNamed("/Project"),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                ButtonBar(
+                  buttonAlignedDropdown: true,
+                  alignment: MainAxisAlignment.center,
                   children: [
-                    Text(
-                      "Projects From Me",
-                      textScaleFactor: 2.25,
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Icon(
-                      Icons.build_circle_outlined,
-                      size: 40,
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
-                width: 50,
-                height: 35,
-              ),
-              FlatButton(
-                onPressed: () =>
-                    Navigator.of(context).pushReplacementNamed("/About"),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "More About Me",
-                      textScaleFactor: 2.25,
-                      style: TextStyle(
-                        color: Colors.green,
+                    FlatButton(
+                      onPressed: () => Navigator.of(context)
+                          .pushReplacementNamed("/Project"),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Projects From Me",
+                            textScaleFactor: 2.25,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Icon(
+                            Icons.build_circle_outlined,
+                            size: 40,
+                          ),
+                        ],
                       ),
                     ),
                     SizedBox(
-                      width: 15,
+                      width: 50,
+                      height: 35,
                     ),
-                    Icon(
-                      Icons.account_box,
-                      size: 40,
-                      color: Colors.green,
+                    FlatButton(
+                      onPressed: () =>
+                          Navigator.of(context).pushReplacementNamed("/About"),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "More About Me",
+                            textScaleFactor: 2.25,
+                            style: TextStyle(
+                              color: Colors.green,
+                            ),
+                          ),
+                          SizedBox(
+                            width: 15,
+                          ),
+                          Icon(
+                            Icons.account_box,
+                            size: 40,
+                            color: Colors.green,
+                          ),
+                        ],
+                      ),
                     ),
                   ],
-                ),
-              ),
-            ],
-          )
-        ],
+                )
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

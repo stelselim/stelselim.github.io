@@ -20,6 +20,13 @@ Widget appBarWidget({BuildContext context}) {
       actions: <Widget>[
         IconButton(
           icon: Icon(
+            FontAwesomeIcons.addressCard,
+            size: 20,
+          ),
+          onPressed: () => launchCV(),
+        ),
+        IconButton(
+          icon: Icon(
             FontAwesomeIcons.github,
             size: 20,
           ),
@@ -32,20 +39,20 @@ Widget appBarWidget({BuildContext context}) {
           ),
           onPressed: () => launchLinkedin(),
         ),
-        IconButton(
-          icon: Icon(
-            FontAwesomeIcons.appStore,
-            size: 20,
-          ),
-          onPressed: () => launchAppleStore(),
-        ),
-        IconButton(
-          icon: Icon(
-            FontAwesomeIcons.googlePlay,
-            size: 20,
-          ),
-          onPressed: () => launchGooglePlay(),
-        ),
+        // IconButton(
+        //   icon: Icon(
+        //     FontAwesomeIcons.appStore,
+        //     size: 20,
+        //   ),
+        //   onPressed: () => launchAppleStore(),
+        // ),
+        // IconButton(
+        //   icon: Icon(
+        //     FontAwesomeIcons.googlePlay,
+        //     size: 20,
+        //   ),
+        //   onPressed: () => launchGooglePlay(),
+        // ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 10),
           child: PopupMenuButton(
@@ -123,6 +130,16 @@ Widget appBarWidget({BuildContext context}) {
         ],
       ),
       actions: [
+        SizedBox(
+          width: 5,
+        ),
+        IconButton(
+          icon: Icon(
+            FontAwesomeIcons.addressCard,
+            size: 25,
+          ),
+          onPressed: () => launchCV(),
+        ),
         SizedBox(
           width: 5,
         ),

@@ -20,7 +20,7 @@ final optionsSmall = CarouselOptions(
   scrollDirection: Axis.horizontal,
   autoPlayAnimationDuration: Duration(seconds: 2),
   initialPage: 0,
-  aspectRatio: 10 / 9,
+  aspectRatio: 12 / 9,
   enableInfiniteScroll: true,
   autoPlay: true,
   autoPlayInterval: Duration(seconds: 4),

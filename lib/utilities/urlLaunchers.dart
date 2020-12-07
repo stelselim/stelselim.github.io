@@ -1,6 +1,15 @@
 import 'package:portfolio/constants/urls.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+void launchCV() async {
+  const url = cvURL;
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 void launchTwitter() async {
   const url = twitter;
   if (await canLaunch(url)) {
