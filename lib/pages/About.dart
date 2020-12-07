@@ -23,6 +23,9 @@ class About extends StatelessWidget {
             margin: EdgeInsets.symmetric(horizontal: width * margin),
             child: Column(
               children: [
+                SizedBox(
+                  height: 20,
+                ),
                 Container(
                   alignment: Alignment.center,
                   height: 350,
@@ -34,7 +37,7 @@ class About extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Text(
-                    "About",
+                    "About Me",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontWeight: FontWeight.w600,
@@ -43,10 +46,75 @@ class About extends StatelessWidget {
                     textScaleFactor: 1.5,
                   ),
                 ),
-                Text(
-                  aboutMeText,
-                  textAlign: TextAlign.center,
-                  textScaleFactor: 1.5,
+                Card(
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 20,
+                  ),
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(30),
+                    child: SelectableText(
+                      aboutMeText1,
+                      textScaleFactor: 2.1,
+                      style: TextStyle(
+                        height: 1.5,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 20,
+                  ),
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(30),
+                    child: SelectableText(
+                      aboutMeText2,
+                      textScaleFactor: 2.2,
+                      style: TextStyle(
+                        height: 1.5,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 20,
+                  ),
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(30),
+                    child: SelectableText(
+                      aboutMeText3,
+                      textScaleFactor: 2.2,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ),
+                Card(
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 20,
+                  ),
+                  child: Container(
+                    alignment: Alignment.center,
+                    padding: EdgeInsets.all(30),
+                    child: SelectableText(
+                      aboutMeText4,
+                      textScaleFactor: 2.2,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
                 ),
               ],
             ),
