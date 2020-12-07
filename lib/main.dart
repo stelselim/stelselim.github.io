@@ -17,7 +17,7 @@ class PortfolioAppp extends StatelessWidget {
       initialRoute: "/",
       routes: {
         "/": (context) => Home(),
-        "/Project": (context) => Projects(),
+        "/Project": (context) => ProjectsPage(),
         "/About": (context) => About(),
       },
     );
