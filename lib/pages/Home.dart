@@ -1,7 +1,9 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/components/appBar.dart';
+import 'package:portfolio/components/textCard.dart';
 import 'package:portfolio/constants/carouselItems.dart';
 import 'package:portfolio/constants/carouselOptions.dart';
 import 'package:portfolio/constants/texts.dart';
@@ -23,9 +25,6 @@ class _HomeState extends State<Home> {
     final width = MediaQuery.of(context).size.width;
     final height = MediaQuery.of(context).size.height;
 
-    final marginText = width > 800 ? 0.2 : 0.1;
-    final imageMargin = width > 1000 ? 0.15 : 0.05;
-    final portfoliofontSize = width < 600 ? 30 : 45;
     isMobile = checkMobile(context);
     return Scaffold(
       appBar: appBarWidget(
@@ -43,6 +42,9 @@ class _HomeState extends State<Home> {
               padding: EdgeInsets.only(bottom: 100),
               shrinkWrap: true,
               children: [
+                SizedBox(
+                  height: 10,
+                ),
                 isMobile
                     ? CarouselSlider(
                         items: isMobile ? carouselItemsSmall : carouselItems,
@@ -68,21 +70,14 @@ class _HomeState extends State<Home> {
                           ],
                         ),
                       ),
-                Card(
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10,
-                    horizontal: 20,
-                  ),
-                  child: Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(30),
-                    child: SelectableText(
-                      homeShortDescription,
-                      textScaleFactor: 2.2,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                      ),
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: TextCard(
+                    icon: Icon(
+                      FontAwesomeIcons.portrait,
+                      size: 35,
                     ),
+                    text: homeShortDescription,
                   ),
                 ),
                 SizedBox(

@@ -1,12 +1,12 @@
+import 'package:flutter/material.dart';
 import 'package:portfolio/constants/urls.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-void launchCV() async {
-  const url = cvURL;
-  if (await canLaunch(url)) {
-    await launch(url);
+void launchCV(BuildContext context) async {
+  if (await canLaunch("/cv/cv.pdf")) {
+    await launch("/cv/cv.pdf");
   } else {
-    throw 'Could not launch $url';
+    throw 'Could not launch /cv/cv.pdf';
   }
 }
 

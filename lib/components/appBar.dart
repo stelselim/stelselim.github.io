@@ -23,7 +23,7 @@ Widget appBarWidget({BuildContext context}) {
             FontAwesomeIcons.addressCard,
             size: 20,
           ),
-          onPressed: () => launchCV(),
+          onPressed: () => launchCV(context),
         ),
         IconButton(
           icon: Icon(
@@ -138,7 +138,7 @@ Widget appBarWidget({BuildContext context}) {
             FontAwesomeIcons.addressCard,
             size: 25,
           ),
-          onPressed: () => launchCV(),
+          onPressed: () => launchCV(context),
         ),
         SizedBox(
           width: 5,

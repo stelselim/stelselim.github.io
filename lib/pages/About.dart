@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:portfolio/components/appBar.dart';
+import 'package:portfolio/components/textCard.dart';
 import 'package:portfolio/constants/texts.dart';
 
 class About extends StatelessWidget {
@@ -18,6 +20,8 @@ class About extends StatelessWidget {
         context: context,
       ),
       body: ListView(
+        padding: EdgeInsets.only(bottom: 60),
+        physics: ScrollPhysics(),
         children: [
           Container(
             margin: EdgeInsets.symmetric(horizontal: width * margin),
@@ -46,75 +50,33 @@ class About extends StatelessWidget {
                     textScaleFactor: 1.5,
                   ),
                 ),
-                Card(
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10,
-                    horizontal: 20,
+                TextCard(
+                  icon: Icon(
+                    Icons.school,
+                    size: 35,
                   ),
-                  child: Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(30),
-                    child: SelectableText(
-                      aboutMeText1,
-                      textScaleFactor: 2.1,
-                      style: TextStyle(
-                        height: 1.5,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
+                  text: aboutMeText1,
                 ),
-                Card(
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10,
-                    horizontal: 20,
+                TextCard(
+                  icon: Icon(
+                    Icons.work,
+                    size: 35,
                   ),
-                  child: Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(30),
-                    child: SelectableText(
-                      aboutMeText2,
-                      textScaleFactor: 2.2,
-                      style: TextStyle(
-                        height: 1.5,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
+                  text: aboutMeText2,
                 ),
-                Card(
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10,
-                    horizontal: 20,
+                TextCard(
+                  icon: Icon(
+                    FontAwesomeIcons.fly,
+                    size: 35,
                   ),
-                  child: Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(30),
-                    child: SelectableText(
-                      aboutMeText3,
-                      textScaleFactor: 2.2,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
+                  text: aboutMeText3,
                 ),
-                Card(
-                  margin: EdgeInsets.symmetric(
-                    vertical: 10,
-                    horizontal: 20,
+                TextCard(
+                  icon: Icon(
+                    FontAwesomeIcons.basketballBall,
+                    size: 35,
                   ),
-                  child: Container(
-                    alignment: Alignment.center,
-                    padding: EdgeInsets.all(30),
-                    child: SelectableText(
-                      aboutMeText4,
-                      textScaleFactor: 2.2,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
-                  ),
+                  text: aboutMeText4,
                 ),
               ],
             ),
