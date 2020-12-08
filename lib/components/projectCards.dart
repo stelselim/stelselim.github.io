@@ -15,7 +15,7 @@ class ProjectCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 350,
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.all(10),
       child: Card(
         color: ThemeData.light().cardColor.withRed(250),
         child: Column(
@@ -43,20 +43,21 @@ class ProjectCard extends StatelessWidget {
             ),
             CarouselSlider(
               items: project.pictures
-                  .map((e) => Container(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 2, horizontal: 5),
-                        decoration: BoxDecoration(
-                            // color: Colors.grey.shade400,
-                            ),
-                        child: Image.asset(
-                          '/projects/phone.png',
-                          height: 450,
-                        ),
-                      ))
+                  .map(
+                    (e) => Container(
+                      padding: EdgeInsets.symmetric(vertical: 2, horizontal: 5),
+                      decoration: BoxDecoration(
+                          // color: Colors.grey.shade400,
+                          ),
+                      child: Image.asset(
+                        e,
+                        // height: 500,
+                      ),
+                    ),
+                  )
                   .toList(),
               options: CarouselOptions(
-                height: 450,
+                height: 520,
                 viewportFraction: 1,
                 initialPage: 0,
                 enableInfiniteScroll: true,
@@ -92,7 +93,7 @@ class ProjectCard extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 7.0, vertical: 10),
               child: Text(
-                project.description * 2 * 3,
+                project.description,
                 textAlign: TextAlign.left,
                 textScaleFactor: 1.4,
               ),
