@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:portfolio/constants/urls.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+Future launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url);
+  } else {
+    throw 'Could not launch $url';
+  }
+}
+
 void launchCV(BuildContext context) async {
   if (await canLaunch("https://stelselim.github.io/cv/cv.pdf")) {
     await launch("https://stelselim.github.io/cv/cv.pdf");

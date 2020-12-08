@@ -20,10 +20,15 @@ class ProjectsPage extends StatelessWidget {
         ),
         body: ListView.builder(
           shrinkWrap: true,
+          physics: ScrollPhysics(),
           itemCount: projects.length,
           itemBuilder: (context, index) => Row(
             children: [
-              Expanded(child: ProjectCard(project: projects.elementAt(index)))
+              Expanded(
+                  child: ProjectCard(
+                noScroll: true,
+                project: projects.elementAt(index),
+              ))
             ],
           ),
         ),
