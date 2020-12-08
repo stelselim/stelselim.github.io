@@ -3,8 +3,8 @@ import 'package:portfolio/constants/urls.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 void launchCV(BuildContext context) async {
-  if (await canLaunch("/cv/cv.pdf")) {
-    await launch("/cv/cv.pdf");
+  if (await canLaunch("https://stelselim.github.io/cv/cv.pdf")) {
+    await launch("https://stelselim.github.io/cv/cv.pdf");
   } else {
     throw 'Could not launch /cv/cv.pdf';
   }

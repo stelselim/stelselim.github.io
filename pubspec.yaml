@@ -25,6 +25,7 @@ dependencies:
     sdk: flutter
   open_file: ^3.0.1
   url_launcher: ^5.4.5
+  google_fonts: ^1.1.1
   carousel_slider: "2.3.1"
   font_awesome_flutter: ^8.8.1
   auto_size_text: ^2.1.0
