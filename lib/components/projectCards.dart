@@ -14,7 +14,6 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 350,
       padding: EdgeInsets.all(10),
       child: Card(
         color: ThemeData.light().cardColor.withRed(250),
@@ -57,6 +56,7 @@ class ProjectCard extends StatelessWidget {
                   )
                   .toList(),
               options: CarouselOptions(
+                scrollPhysics: ClampingScrollPhysics(),
                 height: 520,
                 viewportFraction: 1,
                 initialPage: 0,

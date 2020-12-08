@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 final List<Project> projects = [
   Project(
-    name: "Video Saver",
+    name: "V1",
     description: 'Video Saver is a great way to save youtube videos',
     websiteUrl: "www.google.com",
     playstoreUrl: "www.google.com",
@@ -17,7 +17,7 @@ final List<Project> projects = [
     frameworks: "Flutter",
   ),
   Project(
-    name: "Video Saver",
+    name: "2",
     description: 'Video Saver is a great way to save youtube videos',
     websiteUrl: "www.google.com",
     playstoreUrl: "www.google.com",
@@ -32,7 +32,7 @@ final List<Project> projects = [
     frameworks: "Flutter",
   ),
   Project(
-    name: "Video Saver",
+    name: "3",
     description: 'Video Saver is a great way to save youtube videos',
     websiteUrl: "www.google.com",
     playstoreUrl: "www.google.com",
@@ -47,7 +47,7 @@ final List<Project> projects = [
     frameworks: "Flutter",
   ),
   Project(
-    name: "Video Saver",
+    name: "4",
     description: 'Video Saver is a great way to save youtube videos',
     websiteUrl: "www.google.com",
     playstoreUrl: "www.google.com",
@@ -62,7 +62,7 @@ final List<Project> projects = [
     frameworks: "Flutter",
   ),
   Project(
-    name: "Video Saver",
+    name: "5",
     description: 'Video Saver is a great way to save youtube videos',
     websiteUrl: "www.google.com",
     playstoreUrl: "www.google.com",
@@ -71,13 +71,29 @@ final List<Project> projects = [
     pictures: [
       "assets/projects/phone.png",
       "assets/projects/phone.png",
+      "assets/projects/phone.png",
     ],
     date: "12/02/2020",
     frameworks: "Flutter",
   ),
   Project(
-    name: "Video Saver",
-    description: 'Video Svar is a great way to save youtube videos',
+    name: "6",
+    description: 'Video Saver is a great way to save youtube videos',
+    websiteUrl: "www.google.com",
+    playstoreUrl: "www.google.com",
+    appstoreUrl: "www.google.com",
+    githubUrl: "www.google.com",
+    pictures: [
+      "assets/projects/phone.png",
+      "assets/projects/phone.png",
+      "assets/projects/phone.png",
+    ],
+    date: "12/02/2020",
+    frameworks: "Flutter",
+  ),
+  Project(
+    name: "7",
+    description: 'Video Saver is a great way to save youtube videos',
     websiteUrl: "www.google.com",
     playstoreUrl: "www.google.com",
     appstoreUrl: "www.google.com",
