@@ -8,9 +8,6 @@ class ProjectsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int maxCross = 1;
-    double childAspect = 0.32;
-
     /// Show 1
     if (MediaQuery.of(context).size.width < 700) {
       print("1");
@@ -88,7 +85,7 @@ List<Row> makeRows(List<Project> projects, int divide) {
   if (divide == 2) {
     List<Row> result = [];
     for (int i = 0; i < projects.length; i += 2) {
-      var toAdd = Row(children: [
+      var toAdd = Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Expanded(child: ProjectCard(project: projects.elementAt(i))),
         projects.length > i + 1
             ? Expanded(child: ProjectCard(project: projects.elementAt(i + 1)))
@@ -101,7 +98,7 @@ List<Row> makeRows(List<Project> projects, int divide) {
   if (divide == 3) {
     List<Row> result = [];
     for (int i = 0; i < projects.length; i += 3) {
-      var toAdd = Row(children: [
+      var toAdd = Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Expanded(child: ProjectCard(project: projects.elementAt(i))),
         projects.length > i + 1
             ? Expanded(child: ProjectCard(project: projects.elementAt(i + 1)))
@@ -116,7 +113,7 @@ List<Row> makeRows(List<Project> projects, int divide) {
   } else {
     List<Row> result = [];
     for (int i = 0; i < projects.length; i += 4) {
-      var toAdd = Row(children: [
+      var toAdd = Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Expanded(child: ProjectCard(project: projects.elementAt(i))),
         projects.length > i + 1
             ? Expanded(child: ProjectCard(project: projects.elementAt(i + 1)))
