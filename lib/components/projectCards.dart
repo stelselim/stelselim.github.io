@@ -14,7 +14,7 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      // color: Colors.grey,
+      width: 350,
       padding: EdgeInsets.all(20),
       child: Card(
         color: ThemeData.light().cardColor.withRed(250),
@@ -22,7 +22,7 @@ class ProjectCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(
-              height: 4,
+              height: 5,
             ),
             ListTile(
               title: Text(
@@ -38,11 +38,8 @@ class ProjectCard extends StatelessWidget {
                 ),
               ),
             ),
-            Divider(
-              color: Colors.black,
-            ),
             SizedBox(
-              height: 20,
+              height: 15,
             ),
             CarouselSlider(
               items: project.pictures
@@ -59,8 +56,8 @@ class ProjectCard extends StatelessWidget {
                       ))
                   .toList(),
               options: CarouselOptions(
-                height: 400,
-                viewportFraction: 0.8,
+                height: 450,
+                viewportFraction: 1,
                 initialPage: 0,
                 enableInfiniteScroll: true,
                 autoPlay: true,
@@ -72,9 +69,8 @@ class ProjectCard extends StatelessWidget {
                 scrollDirection: Axis.horizontal,
               ),
             ),
-            Divider(),
             SizedBox(
-              height: 5,
+              height: 10,
             ),
             Divider(),
             SizedBox(
@@ -96,7 +92,7 @@ class ProjectCard extends StatelessWidget {
               padding:
                   const EdgeInsets.symmetric(horizontal: 7.0, vertical: 10),
               child: Text(
-                project.description,
+                project.description * 2 * 3,
                 textAlign: TextAlign.left,
                 textScaleFactor: 1.4,
               ),

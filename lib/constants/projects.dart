@@ -19,6 +19,10 @@ final List<Project> projects = [
   Project(
     name: "Video Saver",
     description: 'Video Svar is a great way to save youtube videos',
+    websiteUrl: "www.google.com",
+    playstoreUrl: "www.google.com",
+    appstoreUrl: "www.google.com",
+    githubUrl: "www.google.com",
     pictures: [
       'projects/phone.png',
       'projects/phone.png',
@@ -30,6 +34,55 @@ final List<Project> projects = [
   Project(
     name: "Video Saver",
     description: 'Video Svar is a great way to save youtube videos',
+    websiteUrl: "www.google.com",
+    playstoreUrl: "www.google.com",
+    appstoreUrl: "www.google.com",
+    githubUrl: "www.google.com",
+    pictures: [
+      'projects/phone.png',
+      'projects/phone.png',
+      'projects/phone.png'
+    ],
+    date: "12/02/2020",
+    frameworks: "Flutter",
+  ),
+  Project(
+    name: "Video Saver",
+    description: 'Video Svar is a great way to save youtube videos',
+    websiteUrl: "www.google.com",
+    playstoreUrl: "www.google.com",
+    appstoreUrl: "www.google.com",
+    githubUrl: "www.google.com",
+    pictures: [
+      'projects/phone.png',
+      'projects/phone.png',
+      'projects/phone.png'
+    ],
+    date: "12/02/2020",
+    frameworks: "Flutter",
+  ),
+  Project(
+    name: "Video Saver",
+    description: 'Video Svar is a great way to save youtube videos',
+    websiteUrl: "www.google.com",
+    playstoreUrl: "www.google.com",
+    appstoreUrl: "www.google.com",
+    githubUrl: "www.google.com",
+    pictures: [
+      'projects/phone.png',
+      'projects/phone.png',
+      'projects/phone.png'
+    ],
+    date: "12/02/2020",
+    frameworks: "Flutter",
+  ),
+  Project(
+    name: "Video Saver",
+    description: 'Video Svar is a great way to save youtube videos',
+    websiteUrl: "www.google.com",
+    playstoreUrl: "www.google.com",
+    appstoreUrl: "www.google.com",
+    githubUrl: "www.google.com",
     pictures: [
       'projects/phone.png',
       'projects/phone.png',
@@ -57,12 +110,12 @@ class Project {
   Project({
     @required this.name,
     @required this.description,
-    this.date,
-    this.frameworks,
+    @required this.frameworks,
+    @required this.date,
+    @required this.pictures,
     this.websiteUrl,
     this.appstoreUrl,
     this.githubUrl,
     this.playstoreUrl,
-    @required this.pictures,
   });
 }

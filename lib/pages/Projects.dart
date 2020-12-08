@@ -8,39 +8,36 @@ class ProjectsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int crossAxisCount = 1;
-    if (MediaQuery.of(context).size.width > 400) crossAxisCount = 2;
-    if (MediaQuery.of(context).size.width > 800) crossAxisCount = 1;
-    if (MediaQuery.of(context).size.width > 800) crossAxisCount = 2;
-    if (MediaQuery.of(context).size.width > 1000) crossAxisCount = 3;
+    int maxCross = 1;
+    double childAspect = 0.32;
+    // if (MediaQuery.of(context).size.width < 350) {
+    //   maxCross = 1;
+    //   childAspect = 0.32;
+    // }
+    // if (MediaQuery.of(context).size.width > 350) {
+    //   maxCross = 1;
+    //   childAspect = 0.4;
+    // }
+    // if (MediaQuery.of(context).size.width > 700) {
+    //   maxCross = 2;
+    //   childAspect = 0.55;
+    // }
+    // if (MediaQuery.of(context).size.width > 1050) {
+    //   maxCross = 3;
+    // }
+    // if (MediaQuery.of(context).size.width > 1500) {
+    //   maxCross = 4;
+    // }
 
     return Scaffold(
       appBar: appBarWidget(
         context: context,
       ),
       body: ListView.builder(
-        shrinkWrap: true,
         itemCount: projects.length,
-        itemBuilder: (context, index) {
-          return ProjectCard(
-            project: projects.elementAt(index),
-          );
-        },
+        itemBuilder: (context, index) =>
+            ProjectCard(project: projects.elementAt(index)),
       ),
-      // body: GridView.builder(
-      //   itemCount: projects.length,
-      //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-      //     crossAxisCount: crossAxisCount,
-      //     crossAxisSpacing: 15,
-      //     mainAxisSpacing: 15,
-      //   ),
-      //   shrinkWrap: true,
-      //   itemBuilder: (context, index) {
-      //     return ProjectCard(
-      //       project: projects.elementAt(index),
-      //     );
-      //   },
-      // ),
     );
   }
 }
