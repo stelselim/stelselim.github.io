@@ -2,6 +2,22 @@ import 'package:flutter/material.dart';
 
 final List<Project> projects = [
   Project(
+      name: "Control Algorithms Server",
+      description:
+          "The objective of the project is that making a really simple API in order to analyze a system in transfer function model. It's so simplified to see control functions, such as step response, stepinfo, bodeplot and much more. All API's are designed to take URL Parameters as an input. Accordingly, you to use GET requests without needing anything else.",
+      frameworks: "Flask and Google Cloud App Engine",
+      date: "12.25.2020",
+      pictures: [
+        "assets/projects/ControlAlgorithms/1.png",
+        "assets/projects/ControlAlgorithms/2.png",
+        "assets/projects/ControlAlgorithms/3.png",
+        "assets/projects/ControlAlgorithms/4.png",
+        "assets/projects/ControlAlgorithms/5.png",
+      ],
+      githubUrl: "https://github.com/stelselim/ControlAlgorithms",
+      websiteUrl:
+          "https://github.com/stelselim/ControlAlgorithms#welcome-to-control-algorithms"),
+  Project(
     name: "PandaTube",
     description:
         'PandaTube is a platform where Youtube videos can be watched with selected filtered by parents for their children.',

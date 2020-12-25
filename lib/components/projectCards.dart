@@ -149,6 +149,7 @@ class ProjectCard extends StatelessWidget {
               padding: const EdgeInsets.all(10.0),
               child: Text(
                 "Developed with " + project.frameworks,
+                textAlign: TextAlign.center,
                 textScaleFactor: 1.4,
                 style: TextStyle(
                   color: Colors.blueGrey.shade600,
