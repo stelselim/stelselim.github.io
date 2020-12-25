@@ -1,7 +1,7 @@
 # Personal Portfolio 
 
-My portfolio website using Flutter for Web (Beta).
+My portfolio website using Flutter for Web.
 
-LinkedIn: https://www.linkedin.com/in/selimustel/
+# Website: https://stelselim.github.io/
+# LinkedIn: https://www.linkedin.com/in/selimustel/
 
-> working in progress.
