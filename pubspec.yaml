@@ -51,6 +51,8 @@ flutter:
     - assets/myself/
     - assets/projects/
     - assets/projects/changescenario/
+    - assets/projects/meditation/
+    - assets/projects/cryptoLost/
     - assets/projects/countToGoal/
     - assets/projects/diyetin/
     - assets/projects/minimalistPdf/

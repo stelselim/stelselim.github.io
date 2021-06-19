@@ -10,7 +10,6 @@ class ProjectsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     /// Show 1
     if (MediaQuery.of(context).size.width < 700) {
-      print("1");
       return Scaffold(
         appBar: appBarWidget(
           context: context,
@@ -34,7 +33,6 @@ class ProjectsPage extends StatelessWidget {
 
     /// Show 2
     if (MediaQuery.of(context).size.width < 1200) {
-      print("2");
       return Scaffold(
         appBar: appBarWidget(
           context: context,
@@ -48,7 +46,6 @@ class ProjectsPage extends StatelessWidget {
 
     /// Show 3
     if (MediaQuery.of(context).size.width < 1350) {
-      print("3");
       return Scaffold(
         appBar: appBarWidget(
           context: context,
@@ -62,7 +59,6 @@ class ProjectsPage extends StatelessWidget {
 
     /// Show 4
     else {
-      print("3");
       return Scaffold(
         appBar: appBarWidget(
           context: context,
