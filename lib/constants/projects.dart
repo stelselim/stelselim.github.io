@@ -2,6 +2,20 @@ import 'package:flutter/material.dart';
 
 final List<Project> projects = [
   Project(
+    name: "ZippyPay App",
+    description:
+        "Zippy Pay is a QR-based payment app. Worked both Back End and Front End. Front End applications are being developed using React Native and React. Back End application is being developed using Node.js, MongoDB on AWS.",
+    frameworks: "React Native, Node.js and MongoDB. ",
+    date: "05.25.2021",
+    pictures: [
+      "assets/projects/zippy/1.png",
+      "assets/projects/zippy/2.png",
+    ],
+    appstoreUrl: "https://apps.apple.com/tr/app/zippy-pay/id1558159188?l=tr",
+    playstoreUrl:
+        "https://play.google.com/store/apps/details?id=com.zipppay.user",
+  ),
+  Project(
     name: "Crypto Lost App",
     description:
         "Crypto Lost App is a profit calculator & saver for crypto coins. It is developed with DDD (Domain Driven Design) principles.",

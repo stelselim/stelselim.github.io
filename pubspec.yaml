@@ -61,6 +61,7 @@ flutter:
     - assets/projects/pomodorolite/
     - assets/projects/videosaver/
     - assets/projects/raf/
+    - assets/projects/zippy/
     - assets/projects/ControlAlgorithms/
 
   # An image asset can refer to one or more resolution-specific "variants", see
